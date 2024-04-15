@@ -14,6 +14,8 @@ import java.util.HashSet;
 import java.util.Set;
 import bt.edu.gcit.usermicroservice.entity.Role;
 import jakarta.persistence.FetchType;
+// import jakarta.persistence.Lob;
+
 
 @Entity
 @Table(name = "user")
@@ -78,10 +80,6 @@ public class User {
         this.email = email;
     }
 
-    public boolean isEnabled() {
-        return enabled;
-    }
-
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
@@ -117,4 +115,17 @@ public class User {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
+    // @Lob
+    // @Column(name = "photo", columnDefinition="BLOB")
+    // private byte[] photo;
+
+    // // getters and setters...
+
+    // public byte[] getPhoto() {
+    //     return photo;
+    // }
+
+    // public void setPhoto(byte[] photo) {
+    //     this.photo = photo;
+    // }
 }

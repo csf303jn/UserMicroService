@@ -114,7 +114,8 @@ public class UserServiceImpl implements UserService {
         Path uploadPath = Paths.get(uploadDir, filename);
         photo.transferTo(uploadPath);
         user.setPhoto(filename);
-        save(user);
+        userDAO.save(user);
+        // save(user);
     }
 
 }

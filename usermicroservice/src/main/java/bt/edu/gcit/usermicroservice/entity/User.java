@@ -16,7 +16,6 @@ import bt.edu.gcit.usermicroservice.entity.Role;
 import jakarta.persistence.FetchType;
 // import jakarta.persistence.Lob;
 
-
 @Entity
 @Table(name = "user")
 public class User {
@@ -80,6 +79,10 @@ public class User {
         this.email = email;
     }
 
+    public boolean isEnabled() {
+        return enabled;
+    }
+
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
@@ -122,10 +125,10 @@ public class User {
     // // getters and setters...
 
     // public byte[] getPhoto() {
-    //     return photo;
+    // return photo;
     // }
 
     // public void setPhoto(byte[] photo) {
-    //     this.photo = photo;
+    // this.photo = photo;
     // }
 }
